@@ -14,10 +14,10 @@ charging = (
 # notification to desktop
 # help(Notification)
 if charging:
-    if percent == 100:
-        charging_message = "Unplug your Charger"
+    if percent != 100:
+        charging_message = "Your device is charging !"
     else:
-        charging_message = "Charging"
+        charging_message = "Fully charged !"
 else:
     charging_message = "Not Charging"
 message = str(percent) + "% Charged\n" + charging_message
